@@ -43,7 +43,7 @@ fi
 ditto -xk "$1" "$OUTDIR"
 
 # create dmg from directory
-hdiutil create -srcfolder "$OUTDIR" "${2}/${BASENAME}.dmg"
+hdiutil create -srcfolder "$OUTDIR" -volname "${BASENAME}" "${2}/${BASENAME}.dmg"
 
 # cleanup
 rm -rf "$OUTDIR"
